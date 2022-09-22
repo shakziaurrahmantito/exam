@@ -74,7 +74,7 @@ class mainController extends Controller
 
     public function showResult(){
 
-        $final = finalMark::orderby("answer","ASC")->get();
+        $final = finalMark::orderby("answer","DESC")->get();
 
         return view("showAllresult", compact("final"));
     }
